@@ -1,0 +1,58 @@
+{
+  "components": [
+    {
+      "label": "Username",
+      "type": "textfield",
+      "id": "Field_0mqzc66",
+      "key": "username",
+      "description": "username for new account",
+      "disabled": false,
+      "validate": {
+        "required": true,
+        "minLength": 3
+      }
+    },
+    {
+      "label": "Password",
+      "type": "textfield",
+      "id": "Field_03sa9gm",
+      "key": "password",
+      "description": "password for new account",
+      "validate": {
+        "required": true,
+        "minLength": 6
+      }
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "id": "Field_15oqtr0",
+      "key": "email",
+      "description": "email",
+      "disabled": false,
+      "validate": {
+        "required": true,
+        "pattern": "^\\S+@\\S+\\.\\S+$"
+      }
+    },
+    {
+      "label": "isAdmin",
+      "type": "checkbox",
+      "id": "Field_0kd9zv0",
+      "key": "isAdmin",
+      "description": "Is the new user admin",
+      "disabled": false,
+      "properties": {},
+      "defaultValue": false
+    }
+  ],
+  "type": "default",
+  "id": "signup",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}

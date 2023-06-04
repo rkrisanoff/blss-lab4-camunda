@@ -1,0 +1,63 @@
+{
+  "components": [
+    {
+      "label": "Title",
+      "type": "textfield",
+      "id": "Field_0n8rbal",
+      "key": "title",
+      "description": "title",
+      "validate": {
+        "required": true,
+        "minLength": 5
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "russian",
+          "value": "russian"
+        },
+        {
+          "label": "chinese",
+          "value": "chinese"
+        },
+        {
+          "label": "italian",
+          "value": "italian"
+        },
+        {
+          "label": "japan",
+          "value": "japan"
+        }
+      ],
+      "label": "Kitchen",
+      "type": "select",
+      "id": "Field_0wvyo1q",
+      "key": "kitchen",
+      "description": "kitchen",
+      "searchable": true,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Description",
+      "type": "textarea",
+      "id": "Field_08542ua",
+      "key": "description",
+      "description": "describe your recipe step-by-step",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "addRecipe",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}

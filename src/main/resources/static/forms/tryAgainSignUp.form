@@ -1,0 +1,27 @@
+{
+  "components": [
+    {
+      "text": "=signUpErrorMessage",
+      "type": "text",
+      "id": "Field_0q16qa4"
+    },
+    {
+      "label": "Try again?",
+      "type": "checkbox",
+      "id": "Field_1qsaaoo",
+      "key": "tryAgainSignUp",
+      "description": "Try againt to signup",
+      "disabled": false,
+      "defaultValue": false
+    }
+  ],
+  "type": "default",
+  "id": "tryAgainSignUp",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}

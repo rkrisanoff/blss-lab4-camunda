@@ -1,0 +1,27 @@
+{
+  "components": [
+    {
+      "label": "Username",
+      "type": "textfield",
+      "id": "Field_1m1p324",
+      "key": "username",
+      "description": "username"
+    },
+    {
+      "label": "Password",
+      "type": "textfield",
+      "id": "Field_0xyhjds",
+      "key": "password",
+      "description": "password"
+    }
+  ],
+  "type": "default",
+  "id": "signIn",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}

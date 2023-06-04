@@ -1,0 +1,27 @@
+spring:
+  security:
+    user:
+      name: user
+      password: user
+  datasource:
+    driverClassName: org.postgresql.Driver
+    password: 142857
+    url: jdbc:postgresql://localhost:5432/camunda
+    username: drukhary
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: lab4
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  sql:
+    init:
+      platform: postgres
+
+camunda.bpm.admin-user:
+  id: drukhary
+  password: drukhary

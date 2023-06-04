@@ -1,0 +1,35 @@
+{
+  "components": [
+    {
+      "text": "Доступны следующие рецепты в статусе модерации",
+      "type": "text",
+      "id": "Field_0g4ohos"
+    },
+    {
+      "text": "=recipesOnModerationIdsRepresentation",
+      "type": "text",
+      "id": "Field_0lj74m4",
+      "properties": {}
+    },
+    {
+      "label": "Id",
+      "type": "number",
+      "id": "Field_0p60fto",
+      "key": "selectedRecipeId",
+      "validate": {
+        "required": true,
+        "min": 1
+      },
+      "description": "Recipe Id you want to look"
+    }
+  ],
+  "type": "default",
+  "id": "recipesOnModeration",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 7
+}

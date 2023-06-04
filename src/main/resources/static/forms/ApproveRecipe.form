@@ -1,0 +1,64 @@
+{
+  "components": [
+    {
+      "text": " Одобрите или отвергните рецепт",
+      "type": "text",
+      "id": "Field_19v60ug"
+    },
+    {
+      "text": "=\"Authtor id: \" +string(selectedRecipeAuthorId)",
+      "type": "text",
+      "id": "Field_02cc6so"
+    },
+    {
+      "text": "=\"Title: \" + selectedRecipeTitle",
+      "type": "text",
+      "id": "Field_1vqnygy"
+    },
+    {
+      "text": "=\"Status: \" + selectedRecipeStatus",
+      "type": "text",
+      "id": "Field_1dt4v0x"
+    },
+    {
+      "text": "=\"Kitchen: \" + selectedRecipeKitchen",
+      "type": "text",
+      "id": "Field_0crqpyt"
+    },
+    {
+      "text": "=\"Description: \" + selectedRecipeDescription",
+      "type": "text",
+      "id": "Field_1x0e5sz"
+    },
+    {
+      "values": [
+        {
+          "label": "approved",
+          "value": "APPROVED"
+        },
+        {
+          "label": "rejected",
+          "value": "REJECTED"
+        }
+      ],
+      "label": "Status",
+      "type": "select",
+      "id": "Field_05gt7pg",
+      "key": "newRecipeStatus",
+      "validate": {
+        "required": true
+      },
+      "description": "Select new status of recipe",
+      "searchable": true
+    }
+  ],
+  "type": "default",
+  "id": "Form_00tjmj4",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}
