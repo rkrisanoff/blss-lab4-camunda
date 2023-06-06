@@ -1,13 +1,27 @@
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: ksumatova178@gmail.com
+    password: hayxdlobulrrcyop
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+    protocol: smtps
+    quartz:
+      job-store-type: memory
   security:
     user:
       name: user
       password: user
   datasource:
     driverClassName: org.postgresql.Driver
-    password: 142857
+    password: another
     url: jdbc:postgresql://localhost:5432/camunda
-    username: drukhary
+    username: antonsabalov
   jpa:
     generate-ddl: true
     hibernate:

@@ -3,7 +3,7 @@ package ifmo.blss.entity;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Data
