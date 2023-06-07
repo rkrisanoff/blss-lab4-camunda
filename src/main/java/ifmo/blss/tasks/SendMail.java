@@ -1,6 +1,7 @@
 package ifmo.blss.tasks;
 
 
+import ifmo.blss.DTO.SetApproveRecipeMessageDto;
 import ifmo.blss.entity.Message;
 import ifmo.blss.entity.Recipe;
 import ifmo.blss.entity.User;
@@ -8,6 +9,7 @@ import ifmo.blss.exceptions.UserNotFoundException;
 import ifmo.blss.repo.RecipeRepo;
 import ifmo.blss.repo.UserRepo;
 
+import ifmo.blss.scheduling.ApproveRecipeJobFactory;
 import ifmo.blss.service.Worker;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
@@ -24,16 +26,19 @@ public class SendMail implements JavaDelegate {
     RecipeRepo recipeRepo;
     @Autowired
     Worker worker;
-//    @Autowired
-//    ApproveRecipeJobFactory approveRecipeJobFactory;
+    @Autowired
+    ApproveRecipeJobFactory approveRecipeJobFactory;
+
     @Override
 
     public void execute(DelegateExecution execution) throws Exception {
         Long recipeId = Long.valueOf((Integer)execution.getVariable("selectedRecipeId"));
         Message message=makeMessageStatusСhangeRecipe(recipeId);
-        worker.sendMail(message);
-
-
+        approveRecipeJobFactory.scheduleEmailSending(new SetApproveRecipeMessageDto(
+                message.getSubject(),
+                message.getEmailTo(),
+                message.getText()
+        ));
     }
     public Message makeMessageStatusСhangeRecipe(Long recipeId) throws UserNotFoundException {
         Recipe recipe=recipeRepo.findById(recipeId).get();

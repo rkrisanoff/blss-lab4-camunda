@@ -14,7 +14,6 @@ public class SignIn implements JavaDelegate{
     @Autowired
     UserRepo userRepo;
     @Override
-    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         String username = (String) execution.getVariable("username");
         String password = (String) execution.getVariable("password");

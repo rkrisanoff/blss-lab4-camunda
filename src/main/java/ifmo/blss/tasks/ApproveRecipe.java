@@ -4,6 +4,7 @@ import camundajar.impl.scala.Option;
 import ifmo.blss.entity.Recipe;
 import ifmo.blss.entity.Status;
 import ifmo.blss.repo.RecipeRepo;
+import ifmo.blss.scheduling.ApproveRecipeJobFactory;
 import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
@@ -17,8 +18,8 @@ import java.util.Optional;
 public class ApproveRecipe implements JavaDelegate {
     @Autowired
     RecipeRepo recipeRepo;
+
     @Override
-    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         Long recipeId = Long.valueOf((Integer)execution.getVariable("selectedRecipeId"));
         String newRecipeStatusRepresentation = (String) execution.getVariable("newRecipeStatus");
@@ -36,6 +37,7 @@ public class ApproveRecipe implements JavaDelegate {
                 "notifyMessage",
                 "The recipe with id %d is %s!".formatted(recipeId,newRecipeStatusRepresentation)
         );
+
 
 
 

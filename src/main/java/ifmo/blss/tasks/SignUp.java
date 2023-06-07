@@ -19,7 +19,6 @@ public class SignUp implements JavaDelegate {
 //    private BCryptPasswordEncoder passwordEncoder;
 
     @Override
-    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         String username = (String) execution.getVariable("username");
         String password = (String) execution.getVariable("password");
