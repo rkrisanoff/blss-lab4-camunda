@@ -1,0 +1,6 @@
+.idea/
+	lab4-camunda.iml
+	resources/
+	src/main/java/ifmo/blss/config/CamundaConfig.java
+	src/main/java/ifmo/blss/config/TransactionConfig.java
+	src/main/java/ifmo/blss/security/
