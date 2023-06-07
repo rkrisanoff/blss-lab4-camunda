@@ -7,6 +7,7 @@ import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class GetRecipesOnModeration implements JavaDelegate {
     RecipeRepo recipeRepo;
 
     @Override
+    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         ArrayList<Recipe> recipes  = recipeRepo.findAllByStatus(Status.MODERATION);
         StringBuilder stringBuilder = new StringBuilder();

@@ -9,6 +9,7 @@ import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -17,6 +18,7 @@ public class ApproveRecipe implements JavaDelegate {
     @Autowired
     RecipeRepo recipeRepo;
     @Override
+    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         Long recipeId = Long.valueOf((Integer)execution.getVariable("selectedRecipeId"));
         String newRecipeStatusRepresentation = (String) execution.getVariable("newRecipeStatus");

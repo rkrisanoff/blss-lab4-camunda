@@ -27,6 +27,7 @@ public class SendMail implements JavaDelegate {
 //    @Autowired
 //    ApproveRecipeJobFactory approveRecipeJobFactory;
     @Override
+
     public void execute(DelegateExecution execution) throws Exception {
         Long recipeId = Long.valueOf((Integer)execution.getVariable("selectedRecipeId"));
         Message message=makeMessageStatusСhangeRecipe(recipeId);

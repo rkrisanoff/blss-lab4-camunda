@@ -9,6 +9,7 @@ import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class SignUp implements JavaDelegate {
@@ -18,6 +19,7 @@ public class SignUp implements JavaDelegate {
 //    private BCryptPasswordEncoder passwordEncoder;
 
     @Override
+    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         String username = (String) execution.getVariable("username");
         String password = (String) execution.getVariable("password");

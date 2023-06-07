@@ -9,12 +9,14 @@ import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class AddRecipe implements JavaDelegate {
     @Autowired
     RecipeRepo recipeRepo;
     @Override
+    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         String title = (String) execution.getVariable("title");
         String kitchenName = (String) execution.getVariable("kitchen");

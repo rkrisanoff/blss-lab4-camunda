@@ -7,12 +7,14 @@ import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class SignIn implements JavaDelegate{
     @Autowired
     UserRepo userRepo;
     @Override
+    @Transactional
     public void execute(DelegateExecution execution) throws Exception {
         String username = (String) execution.getVariable("username");
         String password = (String) execution.getVariable("password");
