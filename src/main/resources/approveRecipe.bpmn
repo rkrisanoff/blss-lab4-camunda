@@ -26,9 +26,9 @@
         <bpmn:flowNodeRef>Activity_09xh3b6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0ojipsx</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0ijd2se</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>ServiceTask_1pz6ojy</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0l0x8d6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_1vhagiw</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>ServiceTask_1pz6ojy</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:userTask id="Activity_0u7c9t6" name="Сообщение пользователю об ошибке" camunda:formKey="camunda-forms:/forms/tryAgain.form">
@@ -371,15 +371,15 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ServiceTask_1pz6ojy_di" bpmnElement="ServiceTask_1pz6ojy">
-        <dc:Bounds x="1778" y="551" width="100" height="80" />
+        <dc:Bounds x="1784" y="560" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0zmsm6l_di" bpmnElement="SequenceFlow_0zmsm6l">
         <di:waypoint xsi:type="dc:Point" x="1700" y="600" />
         <di:waypoint xsi:type="dc:Point" x="1738" y="600" />
-        <di:waypoint xsi:type="dc:Point" x="1738" y="591" />
-        <di:waypoint xsi:type="dc:Point" x="1778" y="591" />
+        <di:waypoint xsi:type="dc:Point" x="1738" y="600" />
+        <di:waypoint xsi:type="dc:Point" x="1784" y="600" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1753" y="589" width="0" height="13" />
+          <dc:Bounds x="1753" y="593.5" width="0" height="13" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

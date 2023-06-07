@@ -26,7 +26,7 @@ public class GetRecipeOnModerationById implements JavaDelegate {
                     "Recipe with id %d doesn't exist!".formatted(selectedRecipeId)
             );
         }
-        if (recipe.get().getStatus().equals(Status.MODERATION)){
+        if (!recipe.get().getStatus().equals(Status.MODERATION)){
             throw new BpmnError(
                     "recipe_doesnt_on_moderation",
                     "Recipe with id %d doesn't on moderation!".formatted(selectedRecipeId)

@@ -3,7 +3,7 @@ package ifmo.blss.entity;
 
 import lombok.Data;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Data
