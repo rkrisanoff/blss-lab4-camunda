@@ -8,7 +8,7 @@ import ifmo.blss.exceptions.UserNotFoundException;
 import ifmo.blss.repo.RecipeRepo;
 import ifmo.blss.repo.UserRepo;
 
-import ifmo.blss.service.MailSender;
+import ifmo.blss.service.Worker;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +23,14 @@ public class SendMail implements JavaDelegate {
     @Autowired
     RecipeRepo recipeRepo;
     @Autowired
-    MailSender mailSender;
+    Worker worker;
 //    @Autowired
 //    ApproveRecipeJobFactory approveRecipeJobFactory;
     @Override
     public void execute(DelegateExecution execution) throws Exception {
         Long recipeId = Long.valueOf((Integer)execution.getVariable("selectedRecipeId"));
         Message message=makeMessageStatusСhangeRecipe(recipeId);
-        mailSender.sendMail(message);
+        worker.sendMail(message);
 
 
     }

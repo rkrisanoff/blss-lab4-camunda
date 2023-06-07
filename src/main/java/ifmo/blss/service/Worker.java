@@ -23,7 +23,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 @Component
-public class MailSender {
+public class Worker {
 
     @Autowired
     private JavaMailSender javaMailSender;
