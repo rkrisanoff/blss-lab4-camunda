@@ -19,7 +19,7 @@ spring:
       password: user
   datasource:
     driverClassName: org.postgresql.Driver
-    password: another
+    password: hgfghhjf
     url: jdbc:postgresql://localhost:5432/camunda
     username: antonsabalov
   jpa:
